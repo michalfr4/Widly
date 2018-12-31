@@ -5,15 +5,11 @@ using System.Web;
 
 namespace WidlyApp2.Models
 {
-    public class Movie
+    public class Genre
     {
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public Genre Genre { get; set; }
-        public int GenreId { get; set; }
-        public int NumberInStock { get; set; }
-        public DateTime ReleaseDate { get; set; }
 
     }
 }

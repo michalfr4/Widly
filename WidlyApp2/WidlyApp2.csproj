@@ -238,9 +238,30 @@
     <Compile Include="Migrations\201812301857318_RepairMembershipUpdate.Designer.cs">
       <DependentUpon>201812301857318_RepairMembershipUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812311148014_CustomerBDay.cs" />
+    <Compile Include="Migrations\201812311148014_CustomerBDay.Designer.cs">
+      <DependentUpon>201812311148014_CustomerBDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812311152221_CustomerBdaynull.cs" />
+    <Compile Include="Migrations\201812311152221_CustomerBdaynull.Designer.cs">
+      <DependentUpon>201812311152221_CustomerBdaynull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812311155496_NullableBday.cs" />
+    <Compile Include="Migrations\201812311155496_NullableBday.Designer.cs">
+      <DependentUpon>201812311155496_NullableBday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812311222091_ExerciseTwo.cs" />
+    <Compile Include="Migrations\201812311222091_ExerciseTwo.Designer.cs">
+      <DependentUpon>201812311222091_ExerciseTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812311227080_PopulatingGenres.cs" />
+    <Compile Include="Migrations\201812311227080_PopulatingGenres.Designer.cs">
+      <DependentUpon>201812311227080_PopulatingGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -358,6 +379,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812301857318_RepairMembershipUpdate.resx">
       <DependentUpon>201812301857318_RepairMembershipUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311148014_CustomerBDay.resx">
+      <DependentUpon>201812311148014_CustomerBDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311152221_CustomerBdaynull.resx">
+      <DependentUpon>201812311152221_CustomerBdaynull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311155496_NullableBday.resx">
+      <DependentUpon>201812311155496_NullableBday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311222091_ExerciseTwo.resx">
+      <DependentUpon>201812311222091_ExerciseTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311227080_PopulatingGenres.resx">
+      <DependentUpon>201812311227080_PopulatingGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

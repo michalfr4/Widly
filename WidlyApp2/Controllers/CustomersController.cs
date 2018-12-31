@@ -50,7 +50,7 @@ namespace WidlyApp2.Controllers
         [Route("Customers/Details/{id}")]
         public ActionResult Details(int id)
         {
-            var customer = _context.Customers.Where(x => x.Id == id).FirstOrDefault();
+            var customer = _context.Customers.Include(c => c.MembershipType).Where(x => x.Id == id).FirstOrDefault();
 
             if(customer != null)
             {
