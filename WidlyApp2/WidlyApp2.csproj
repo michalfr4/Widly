@@ -202,61 +202,33 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811281657442_One.cs" />
-    <Compile Include="Migrations\201811281657442_One.Designer.cs">
-      <DependentUpon>201811281657442_One.cs</DependentUpon>
+    <Compile Include="Migrations\201812311405262_one.cs" />
+    <Compile Include="Migrations\201812311405262_one.Designer.cs">
+      <DependentUpon>201812311405262_one.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811281708288_newsletter.cs" />
-    <Compile Include="Migrations\201811281708288_newsletter.Designer.cs">
-      <DependentUpon>201811281708288_newsletter.cs</DependentUpon>
+    <Compile Include="Migrations\201812311408032_two.cs" />
+    <Compile Include="Migrations\201812311408032_two.Designer.cs">
+      <DependentUpon>201812311408032_two.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811281712314_membershiptype.cs" />
-    <Compile Include="Migrations\201811281712314_membershiptype.Designer.cs">
-      <DependentUpon>201811281712314_membershiptype.cs</DependentUpon>
+    <Compile Include="Migrations\201812311408501_populationmembershiptype.cs" />
+    <Compile Include="Migrations\201812311408501_populationmembershiptype.Designer.cs">
+      <DependentUpon>201812311408501_populationmembershiptype.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811281714137_PopulateDatabase.cs" />
-    <Compile Include="Migrations\201811281714137_PopulateDatabase.Designer.cs">
-      <DependentUpon>201811281714137_PopulateDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201812311409218_updatemembershiptype.cs" />
+    <Compile Include="Migrations\201812311409218_updatemembershiptype.Designer.cs">
+      <DependentUpon>201812311409218_updatemembershiptype.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811281724416_ApplyAnnotations.cs" />
-    <Compile Include="Migrations\201811281724416_ApplyAnnotations.Designer.cs">
-      <DependentUpon>201811281724416_ApplyAnnotations.cs</DependentUpon>
+    <Compile Include="Migrations\201812311409475_populategenres.cs" />
+    <Compile Include="Migrations\201812311409475_populategenres.Designer.cs">
+      <DependentUpon>201812311409475_populategenres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811281801297_NameAdded.cs" />
-    <Compile Include="Migrations\201811281801297_NameAdded.Designer.cs">
-      <DependentUpon>201811281801297_NameAdded.cs</DependentUpon>
+    <Compile Include="Migrations\201812311436314_AddDate.cs" />
+    <Compile Include="Migrations\201812311436314_AddDate.Designer.cs">
+      <DependentUpon>201812311436314_AddDate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812301825482_CustomerRepaired.cs" />
-    <Compile Include="Migrations\201812301825482_CustomerRepaired.Designer.cs">
-      <DependentUpon>201812301825482_CustomerRepaired.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812301846181_membershiptypeUpdate.cs" />
-    <Compile Include="Migrations\201812301846181_membershiptypeUpdate.Designer.cs">
-      <DependentUpon>201812301846181_membershiptypeUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812301857318_RepairMembershipUpdate.cs" />
-    <Compile Include="Migrations\201812301857318_RepairMembershipUpdate.Designer.cs">
-      <DependentUpon>201812301857318_RepairMembershipUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311148014_CustomerBDay.cs" />
-    <Compile Include="Migrations\201812311148014_CustomerBDay.Designer.cs">
-      <DependentUpon>201812311148014_CustomerBDay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311152221_CustomerBdaynull.cs" />
-    <Compile Include="Migrations\201812311152221_CustomerBdaynull.Designer.cs">
-      <DependentUpon>201812311152221_CustomerBdaynull.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311155496_NullableBday.cs" />
-    <Compile Include="Migrations\201812311155496_NullableBday.Designer.cs">
-      <DependentUpon>201812311155496_NullableBday.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311222091_ExerciseTwo.cs" />
-    <Compile Include="Migrations\201812311222091_ExerciseTwo.Designer.cs">
-      <DependentUpon>201812311222091_ExerciseTwo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311227080_PopulatingGenres.cs" />
-    <Compile Include="Migrations\201812311227080_PopulatingGenres.Designer.cs">
-      <DependentUpon>201812311227080_PopulatingGenres.cs</DependentUpon>
+    <Compile Include="Migrations\201812311448236_RequiredProps.cs" />
+    <Compile Include="Migrations\201812311448236_RequiredProps.Designer.cs">
+      <DependentUpon>201812311448236_RequiredProps.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -268,6 +240,7 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -296,7 +269,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -335,6 +310,8 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -348,52 +325,33 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811281657442_One.resx">
-      <DependentUpon>201811281657442_One.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311405262_one.resx">
+      <DependentUpon>201812311405262_one.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811281708288_newsletter.resx">
-      <DependentUpon>201811281708288_newsletter.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311408032_two.resx">
+      <DependentUpon>201812311408032_two.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811281712314_membershiptype.resx">
-      <DependentUpon>201811281712314_membershiptype.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311408501_populationmembershiptype.resx">
+      <DependentUpon>201812311408501_populationmembershiptype.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811281714137_PopulateDatabase.resx">
-      <DependentUpon>201811281714137_PopulateDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311409218_updatemembershiptype.resx">
+      <DependentUpon>201812311409218_updatemembershiptype.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811281724416_ApplyAnnotations.resx">
-      <DependentUpon>201811281724416_ApplyAnnotations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311409475_populategenres.resx">
+      <DependentUpon>201812311409475_populategenres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811281801297_NameAdded.resx">
-      <DependentUpon>201811281801297_NameAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311436314_AddDate.resx">
+      <DependentUpon>201812311436314_AddDate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812301825482_CustomerRepaired.resx">
-      <DependentUpon>201812301825482_CustomerRepaired.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812301846181_membershiptypeUpdate.resx">
-      <DependentUpon>201812301846181_membershiptypeUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812301857318_RepairMembershipUpdate.resx">
-      <DependentUpon>201812301857318_RepairMembershipUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311148014_CustomerBDay.resx">
-      <DependentUpon>201812311148014_CustomerBDay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311152221_CustomerBdaynull.resx">
-      <DependentUpon>201812311152221_CustomerBdaynull.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311155496_NullableBday.resx">
-      <DependentUpon>201812311155496_NullableBday.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311222091_ExerciseTwo.resx">
-      <DependentUpon>201812311222091_ExerciseTwo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311227080_PopulatingGenres.resx">
-      <DependentUpon>201812311227080_PopulatingGenres.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311448236_RequiredProps.resx">
+      <DependentUpon>201812311448236_RequiredProps.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

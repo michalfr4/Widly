@@ -10,6 +10,7 @@
             <tr>
                 <th scope="col"><b>#</b></th>
                 <th scope="col"><b>Title</b></th>
+                <th scope="col"><b>Genre</b></th>
 
             </tr>
         </thead>
@@ -19,7 +20,8 @@
 
                 <tr>
                     <th scope="row">@numb</th>
-                    <td>@movie.Name</td>
+                    <td><a href="/Movies/Details/@movie.Id"> @movie.Name </a></td>
+                    <td>@movie.Genre.Name</td>
                 </tr>
                 
                     numb++;
