@@ -5,6 +5,11 @@
     }
 
     <h1>Movies</h1>
+    <a href="/Movies/New"> <button class="btn btn-primary">New Movie</button></a>
+
+    <br />
+    <br />
+
     <table class="table table-bordered table-hover">
         <thead class="tablehead">
             <tr>
@@ -20,12 +25,12 @@
 
                 <tr>
                     <th scope="row">@numb</th>
-                    <td><a href="/Movies/Details/@movie.Id"> @movie.Name </a></td>
+                    <td><a href="/Movies/Edit/@movie.Id"> @movie.Name </a></td>
                     <td>@movie.Genre.Name</td>
                 </tr>
-                
-                    numb++;
-                
+
+                numb++;
+
 
             }
         </tbody>

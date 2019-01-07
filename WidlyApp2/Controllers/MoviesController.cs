@@ -25,7 +25,7 @@ namespace WidlyApp2.Controllers
             var movies = _context.Movies.Include(c => c.Genre).ToList();
 
             return View(movies);
-            
+
         }
         // GET: Movies/Random
         //public ActionResult Random()
@@ -51,7 +51,7 @@ namespace WidlyApp2.Controllers
         [Route("Movies/Released/{year}/{month:regex(\\d{2})}:range(1, 12)")]
         public ActionResult ByReleaseDate(int year, int month)
         {
-            return Content(year+"/"+month);
+            return Content(year + "/" + month);
         }
 
         [Route("Movies/Details/{id}")]
@@ -68,6 +68,82 @@ namespace WidlyApp2.Controllers
                 return HttpNotFound();
             }
 
+        }
+
+        public ActionResult New()
+        {
+            var genre = _context.Genres.ToList();
+
+            var viewModel = new MovieFormViewModel()
+            {
+                Genres = genre
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.FirstOrDefault(c => c.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel(movie)
+            {
+                Id = movie.Id,
+                Name = movie.Name,
+                ReleaseDate = movie.ReleaseDate,
+                NumberInStock = movie.NumberInStock,
+                GenreId = movie.GenreId,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("MovieForm", viewModel);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Movie movie)
+        {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel(movie)
+                {
+                    Id = movie.Id,
+                    Name = movie.Name,
+                    ReleaseDate = movie.ReleaseDate,
+                    NumberInStock = movie.NumberInStock,
+                    GenreId = movie.GenreId,
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("MovieForm", viewModel);
+
+            }
+
+
+            if (movie.Id == 0)
+            {
+                movie.AddDate = DateTime.Now;
+                _context.Movies.Add(movie);
+            }
+
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+
+                //TryUpdateModel(customerInDb);
+
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.NumberInStock = movie.NumberInStock;
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
         }
     }
 }
